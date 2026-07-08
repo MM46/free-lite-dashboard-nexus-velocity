@@ -12,6 +12,6 @@ export default defineConfig({
       analyticsTracker: false,
       visualEditAgent: false
     }),
-    react(),
+    react()
   ]
 });
