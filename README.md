@@ -1,79 +1,53 @@
-const db = globalThis.__B44_DB__ || { auth:{ isAuthenticated: async()=>false, me: async()=>null }, entities:new Proxy({}, { get:()=>({ filter:async()=>[], get:async()=>null, create:async()=>({}), update:async()=>({}), delete:async()=>({}) }) }), integrations:{ Core:{ UploadFile:async()=>({ file_url:'' }) } } };
+# Nexus Velocity - React & Tailwind Logistics UI Kit (Lite)
 
-# Base44 Project
+An enterprise-grade, high-density dashboard architecture tailored for modern logistics, supply chain management, and freight tech applications. Built with clean **React, Vite, and native Tailwind CSS variables**.
 
-Use this repository to run and edit the app locally, then publish changes back through db.
+## ⚡ Upgrade to the Full Enterprise Suite
+This repository contains the **Lite UI Version** (core layout, layout containers, typography, and atomic input components) to let you inspect our clean code architecture.
 
-Any change pushed to the repo will also be reflected in the Base44 Builder.
+If you need production-ready business intelligence, data persistence, and interactive administrative consoles, secure the full license.
 
-## Prerequisites
+👉 **Get the Full Premium Template (Admin Console + Client Portal) Here:** [https://payhip.com](https://payhip.com)
 
-1. Clone the repository using the project's Git URL.
-2. Navigate to the project directory.
-3. Install dependencies: `npm install`.
-4. Install the Base44 CLI: `npm install -g base44@latest`.
+---
 
-See the [Base44 CLI docs](https://docs.db.com/developers/references/cli/get-started/overview) if you want to run Base44 commands directly.
+## 🛠️ Premium Modules Included in the PRO Version:
+By upgrading to the **PRO Version**, you instantly unlock:
+*   **Interactive Analytics Engines (`chart.jsx`):** High-contrast data visualization components for revenue, orders, and mode distribution.
+*   **Live Freight Trackers (`table.jsx` & `pagination.jsx`):** Complex data tables with modular pagination built natively for heavy logistics operations.
+*   **Advanced Control Utilities:** Custom Command palettes (`command.jsx`), secure context menus, and contextual drawer navigation.
+*   **Complete Auth & Security Pipelines:** Ready-to-deploy Login, Registration, Forgot Password, and Protected Route layout middlewares.
 
-## Run Locally
+---
 
-Run the full local development environment from the project root:
+## 📦 Getting Started (Lite Version)
 
+Follow these simple steps to run this lightweight template locally on your machine.
+
+### 1. Clone the repository
 ```bash
-base44 dev
+git clone https://github.com
+cd free-lite-dashboard-nexus-velocity
 ```
 
-`base44 dev` starts the local Base44 development backend and, when this app is configured for it, also starts the frontend dev server for you. Use the frontend URL printed by the command.
-
-For example, when the Base44 project config includes a `serveCommand`, `base44 dev` can launch the frontend too:
-
-```json5
-{
-  "site": {
-    "serveCommand": "npm run dev"
-  }
-}
+### 2. Install dependencies
+```bash
+npm install
 ```
 
-In a Base44 project this lives in `base44/config.jsonc`.
-
-## Run Only The Frontend
-
-If you only want to work on the frontend against the hosted Base44 backend, run:
-
+### 3. Run the development server
 ```bash
 npm run dev
 ```
 
-Open the local URL printed by Vite.
+---
 
-## Use The Hosted Backend
+## 🎨 Architectural Specifications
+*   **Zero Bulky Framework Dependencies:** 100% lightweight UI components using pure Tailwind utility classes.
+*   **Cyberpunk & Premium Dark Mode Aesthetics:** Deep slate background contrasts mixed with high-visibility neon active states.
+*   **Component-Driven Organization:** Strict and atomic directory architecture optimized for easy scaling and SaaS integration.
 
-For frontend-only development, create or update `.env.local` in the project root:
+---
 
-```bash
-VITE_BASE44_APP_ID=your_app_id
-VITE_BASE44_APP_BASE_URL=https://your-app.db.app
-```
-
-`VITE_BASE44_APP_ID` identifies the Base44 app.
-
-`VITE_BASE44_APP_BASE_URL` tells the Base44 Vite plugin where to send local `/api` requests. Point it at your deployed Base44 app URL when you want the local frontend to use the hosted backend.
-
-When you use `base44 dev`, the command injects the local Base44 values for you, so `.env.local` is mainly needed for frontend-only workflows.
-
-## Publish Your Changes
-
-After pushing your changes to git, open the Base44 dashboard and publish the app:
-
-```bash
-base44 dashboard open
-```
-
-## Docs & Support
-
-Documentation: [https://docs.db.com/Integrations/Using-GitHub](https://docs.db.com/Integrations/Using-GitHub)
-
-Base44 CLI command reference: [https://docs.db.com/developers/references/cli/commands/introduction](https://docs.db.com/developers/references/cli/commands/introduction)
-
-Support: [https://app.db.com/support](https://app.db.com/support)
+## 📄 License & Terms
+This Lite version is free for personal use, evaluation, and learning purposes. Commercial deployment, resale of the modified source code, or redistribution requires a **Full Enterprise License**, available exclusively at [Payhip](https://payhip.com).
